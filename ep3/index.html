@@ -12,7 +12,9 @@
 <body class="h-full grid place-items-center">
 
     <div id="app">
-        <section v-show="inprogressAssignments.length">
+        <section 
+            v-show="inprogressAssignments.length"
+        >
             <h2 class="font-bold mb-2">In Progress</h2>
 
             <ul>
@@ -29,7 +31,9 @@
         
         </section>
 
-        <section class="mt-8" v-show="completedAssignments.length">
+        <section class="mt-8" 
+            v-show="completedAssignments.length"
+        >
             <h2 class="font-bold mb-2">Completed</h2>
 
             <ul>
