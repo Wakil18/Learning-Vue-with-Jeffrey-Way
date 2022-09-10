@@ -8,7 +8,7 @@ export default {
         >
             <h2 class="font-bold mb-2">{{ title }}</h2>
 
-            <ul>
+            <ul class="border border-gray-600 divide-y divide-gray-600">
                 <assignment
                     v-for="assignment in assignments" 
                     :key="assignment.id"
