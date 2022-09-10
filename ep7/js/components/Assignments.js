@@ -1,36 +1,12 @@
 import AssignmentList from "./AssignmentList.js";
 
 export default {
-
     components: { AssignmentList },
-
     template: `
-
-    <assignment-list :assignments="inprogressAssignments" title:"In Progress"></assignment-list>
-
-    <assignment-list :assignments="completedAssignments" title:"Completed"></assignment-list>
     
+        <assignment-list :assignments="inprogressAssignments" title="In Progress"></assignment-list>
+        <assignment-list :assignments="completedAssignments" title="Completed"></assignment-list>
     
-
-    // <section class="mt-8" 
-    //     v-show="completedAssignments.length"
-    // >
-    //     <h2 class="font-bold mb-2">Completed</h2>
-
-    //     <ul>
-    //         <li 
-    //             v-for="assignment in completedAssignments" 
-    //             :key="assignment.id"
-    //         >
-    //             <label>
-    //                 {{ assignment.name }}
-    //                 <input type="checkbox" v-model="assignment.complete">
-    //             </label>
-    //         </li>
-    //     </ul>
-    
-    // </section>
-
     `,
 
     data() {
@@ -42,7 +18,7 @@ export default {
             ]
         }
     },
-    
+
     computed: {
         inprogressAssignments(){
             return this.assignments.filter(a => !a.complete);
@@ -50,5 +26,6 @@ export default {
         completedAssignments(){
             return this.assignments.filter(a => a.complete)
         }
-    }
+    },
+
 }
